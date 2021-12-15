@@ -4,7 +4,8 @@
 .NOTES
     Author:     Jeff Evans - jevans.dev
     Created:    2021/11/12
-    Version:    0.1.0
+    Modified:   2021/12/15
+    Version:    0.2.0
 #>
 
 function Invoke-HomeAssistantQuery {
@@ -39,8 +40,17 @@ function Invoke-HomeAssistantQuery {
         "Authorization" = "Bearer $AccessToken"
         "content-type"  = "application/json"
     }
+    $InvokeRestMethodSplat = @{
+        Uri = $Uri
+        Headers = $Headers
+        Method = $Method
+        ErrorAction = 'Stop'
+    }
+    If($Body){
+        $InvokeRestMethodSplat.Add('Body',($Body | ConvertTo-Json))
+    }
     try {
-        $RestQuery = Invoke-RestMethod -Uri $Uri -Headers $Headers -Method $Method -ErrorAction Stop -Body ($Body | ConvertTo-Json)
+        $RestQuery = Invoke-RestMethod @InvokeRestMethodSplat
         Write-Output $RestQuery
     }
     catch {

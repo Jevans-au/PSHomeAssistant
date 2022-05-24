@@ -55,6 +55,7 @@ All of the commands you'll see here are compatible with each of the above.
     - Open with GitHub Desktop
     - Download ZIP
 3. Once you have a copy of the module, create a folder in the following location and copy the contents of the 'src' folder to it.
+
     `C:\users\you\Documents\WindowsPowerShell\Modules\PSHomeAssistant`
 
 ### Importing the Module
@@ -79,7 +80,7 @@ Alternatively, there is a way to import the module using a filepath instead of j
 Import-Module -Name PSHomeAssistant # If you saw the module in the previous step
 Import-Module -Name "C:\Users\you\Documents\WindowsPowerShell\Modules\PSHomeAssistant\PSHomeAssistant.psd1" # If you did not see the module in the previous step and wanted to continue anyways
 ```
-3.
+3. a
 ## Using the PSHomeAssistant Functions
 
 ### **Test Functions**

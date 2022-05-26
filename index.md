@@ -115,7 +115,7 @@ Import-Module -Name "C:\Users\you\Documents\WindowsPowerShell\Modules\PSHomeAssi
 
 ### Set-PSHomeAssistantConfiguration
 
-### Set-HomeAssistantLifx
+### [Set-HomeAssistantLifx](https://jevans-au.github.io/PSHomeAssistant/functions/Set-HomeAssistantLifx.html)
 
 ### Set-HomeAssistantLight
 
